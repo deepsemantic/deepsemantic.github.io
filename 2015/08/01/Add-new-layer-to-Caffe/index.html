@@ -11,12 +11,12 @@
 <meta property="og:url" content="http://blog.deepsemantic.com/2015/08/01/Add-new-layer-to-Caffe/index.html">
 <meta property="og:site_name" content="DeepSemantic">
 <meta property="og:description" content="How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Developmentand useful links: https://yunmingzhang.wordpress.com/2015/01/19/h">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/699004-85a6554727cf0e52.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/699004-085429b61e269f16.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/699004-5204a892b14507d7.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/699004-155c38deb9e35f54.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/699004-f4c3e340ef668716.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
-<meta property="og:updated_time" content="2015-08-01T21:26:33.871Z">
+<meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/a.png">
+<meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/b.png">
+<meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/d.png">
+<meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/c.png">
+<meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/e.png">
+<meta property="og:updated_time" content="2015-08-01T21:36:02.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Add new layer to Caffe">
 <meta name="twitter:description" content="How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Developmentand useful links: https://yunmingzhang.wordpress.com/2015/01/19/h">
@@ -161,17 +161,17 @@
       
         <p><strong>How to add a new layer on caffe network?</strong><br>The official but outdated document can be found: <a href="https://github.com/BVLC/caffe/wiki/Development" target="_blank" rel="external">https://github.com/BVLC/caffe/wiki/Development</a><br>and useful links: <a href="https://yunmingzhang.wordpress.com/2015/01/19/how-to-create-your-own-layer-in-deep-learning-framework-caffe/" target="_blank" rel="external">https://yunmingzhang.wordpress.com/2015/01/19/how-to-create-your-own-layer-in-deep-learning-framework-caffe/</a><br>In this work, we try to add a very simple layer: a linear function f(x)=0.5(x)+0.1 as activation layer (just similar to sigma and tahn) to illustrate the way to add new layer to Caffe.</p>
 <ul>
-<li>Step 1: Create a new class<br>you should create a newclass in caffe_root/inclide/caffexx.hppfile.<br>Similar to sigma, it should be addedto neuron_layers.hpp<br>If you want to use GPU version,uncomment gpu functions and implement it in linear_layer.cu<br><img src="http://upload-images.jianshu.io/upload_images/699004-85a6554727cf0e52.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="a.png"></li>
-<li>Step2: Assign new ID to your layer<br>In caffe_root/src/caffe/proto/caffe.proto, we define our layer as LINEAR and assign ID=38 (can be other number), meanwhile, we assign layer parameter ID<br><img src="http://upload-images.jianshu.io/upload_images/699004-085429b61e269f16.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="b.png"></li>
-<li>Setp 3: Implement linear layer incaffe_root/src/caffe/layers.<br>Create a new .cpp file as“linear_layer.cpp”,there are fourmethods might be implemented<br>LayerSetUp(optional): for one-time initialization: reading parameters, fixed-size allocations, etc.<br>Reshape: for computing the sizes of top blobs,allocating buffers, and any other work that depends on the shapes of bottomblobs<br>Forward_cpu: for the function your layer computes<br>Backward_cpu: for its gradient (Optional – a layer can be forward-only)<br>Here, we implement CPU version ofForward and Backward<br><img src="http://upload-images.jianshu.io/upload_images/699004-5204a892b14507d7.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="d.png"></li>
-<li>Step 4: Instantiate and register your layer in your cpp file with the macro provided inlayer_factory.hpp.<br><img src="http://upload-images.jianshu.io/upload_images/699004-155c38deb9e35f54.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="c.png"></li>
-<li>Step 5: add newlayer to train_test_prototxt,compile and run!<br><img src="http://upload-images.jianshu.io/upload_images/699004-f4c3e340ef668716.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="e.png"></li>
+<li>Step 1: Create a new class<br>you should create a newclass in caffe_root/inclide/caffexx.hppfile.<br>Similar to sigma, it should be addedto neuron_layers.hpp<br>If you want to use GPU version,uncomment gpu functions and implement it in linear_layer.cu<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/a.png" alt="a.png"></li>
+<li>Step2: Assign new ID to your layer<br>In caffe_root/src/caffe/proto/caffe.proto, we define our layer as LINEAR and assign ID=38 (can be other number), meanwhile, we assign layer parameter ID<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/b.png" alt="b.png"></li>
+<li>Setp 3: Implement linear layer incaffe_root/src/caffe/layers.<br>Create a new .cpp file as“linear_layer.cpp”,there are fourmethods might be implemented<br>LayerSetUp(optional): for one-time initialization: reading parameters, fixed-size allocations, etc.<br>Reshape: for computing the sizes of top blobs,allocating buffers, and any other work that depends on the shapes of bottomblobs<br>Forward_cpu: for the function your layer computes<br>Backward_cpu: for its gradient (Optional – a layer can be forward-only)<br>Here, we implement CPU version ofForward and Backward<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/d.png" alt="d.png"></li>
+<li>Step 4: Instantiate and register your layer in your cpp file with the macro provided inlayer_factory.hpp.<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/c.png" alt="c.png"></li>
+<li>Step 5: add newlayer to train_test_prototxt,compile and run!<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/e.png" alt="e.png"></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.deepsemantic.com/2015/08/01/Add-new-layer-to-Caffe/" data-id="cictklwtm0000f8pr331al83l" class="article-share-link">分享到</a>
+      <a data-url="http://blog.deepsemantic.com/2015/08/01/Add-new-layer-to-Caffe/" data-id="cictkwh2t0000u0pr1kexenga" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning-Caffe-development/">deep learning, Caffe development</a></li></ul>
