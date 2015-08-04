@@ -5,21 +5,24 @@
   
   <title>Add new layer to Caffe | DeepSemantic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Developmentand useful links: https://yunmingzhang.wordpress.com/2015/01/19/h">
+  <meta name="description" content="——this is original work, please indicate the source if reproduced!——
+How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Develop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Add new layer to Caffe">
 <meta property="og:url" content="http://blog.deepsemantic.com/2015/08/01/Add-new-layer-to-Caffe/index.html">
 <meta property="og:site_name" content="DeepSemantic">
-<meta property="og:description" content="How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Developmentand useful links: https://yunmingzhang.wordpress.com/2015/01/19/h">
+<meta property="og:description" content="——this is original work, please indicate the source if reproduced!——
+How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Develop">
 <meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/a.png">
 <meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/b.png">
 <meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/d.png">
 <meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/c.png">
 <meta property="og:image" content="http://7xktvd.com1.z0.glb.clouddn.com/e.png">
-<meta property="og:updated_time" content="2015-08-01T21:36:02.419Z">
+<meta property="og:updated_time" content="2015-08-04T07:35:10.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Add new layer to Caffe">
-<meta name="twitter:description" content="How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Developmentand useful links: https://yunmingzhang.wordpress.com/2015/01/19/h">
+<meta name="twitter:description" content="——this is original work, please indicate the source if reproduced!——
+How to add a new layer on caffe network?The official but outdated document can be found: https://github.com/BVLC/caffe/wiki/Develop">
   
   
     <link rel="icon" href="favicon.png">
@@ -159,7 +162,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>How to add a new layer on caffe network?</strong><br>The official but outdated document can be found: <a href="https://github.com/BVLC/caffe/wiki/Development" target="_blank" rel="external">https://github.com/BVLC/caffe/wiki/Development</a><br>and useful links: <a href="https://yunmingzhang.wordpress.com/2015/01/19/how-to-create-your-own-layer-in-deep-learning-framework-caffe/" target="_blank" rel="external">https://yunmingzhang.wordpress.com/2015/01/19/how-to-create-your-own-layer-in-deep-learning-framework-caffe/</a><br>In this work, we try to add a very simple layer: a linear function f(x)=0.5(x)+0.1 as activation layer (just similar to sigma and tahn) to illustrate the way to add new layer to Caffe.</p>
+        <p><strong><em>——this is original work, please indicate the source if reproduced!——</em></strong></p>
+<p><strong>How to add a new layer on caffe network?</strong><br>The official but outdated document can be found: <a href="https://github.com/BVLC/caffe/wiki/Development" target="_blank" rel="external">https://github.com/BVLC/caffe/wiki/Development</a><br>and useful links: <a href="https://yunmingzhang.wordpress.com/2015/01/19/how-to-create-your-own-layer-in-deep-learning-framework-caffe/" target="_blank" rel="external">https://yunmingzhang.wordpress.com/2015/01/19/how-to-create-your-own-layer-in-deep-learning-framework-caffe/</a><br>In this work, we try to add a very simple layer: a linear function f(x)=0.5(x)+0.1 as activation layer (just similar to sigma and tahn) to illustrate the way to add new layer to Caffe.</p>
 <ul>
 <li>Step 1: Create a new class<br>you should create a newclass in caffe_root/inclide/caffexx.hppfile.<br>Similar to sigma, it should be addedto neuron_layers.hpp<br>If you want to use GPU version,uncomment gpu functions and implement it in linear_layer.cu<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/a.png" alt="a.png"></li>
 <li>Step2: Assign new ID to your layer<br>In caffe_root/src/caffe/proto/caffe.proto, we define our layer as LINEAR and assign ID=38 (can be other number), meanwhile, we assign layer parameter ID<br><img src="http://7xktvd.com1.z0.glb.clouddn.com/b.png" alt="b.png"></li>
@@ -171,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.deepsemantic.com/2015/08/01/Add-new-layer-to-Caffe/" data-id="cictkwh2t0000u0pr1kexenga" class="article-share-link">分享到</a>
+      <a data-url="http://blog.deepsemantic.com/2015/08/01/Add-new-layer-to-Caffe/" data-id="cicx187kj0000jkprptxam0ty" class="article-share-link">分享到</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning-Caffe-development/">deep learning, Caffe development</a></li></ul>
