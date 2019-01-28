@@ -2,14 +2,14 @@
 # Site settings
 title: Cheng Wang
 name: Cheng Wang
-subtitle: Financial Economist
+subtitle: Research Scientist
 email: dr.rer.nat.chengwang@gmail.com
 description: >
   Financial Economist
 baseurl: ""
 url: "https://deepsemantic.github.io/"
 github_username:  deepsemantic
-disqus_baseurl: "https://deepsemantic.github.io/"
+disqus_baseurl: "https://deepsemantic.github.io."
 disqus_shortname: https-deepsemantic-github-io
 permalink: :title
 
