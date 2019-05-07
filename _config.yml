@@ -50,9 +50,5 @@ social:
     desc: Connect with me on LinkedIn
     share: false
     
-  - name: GoogleScholar
-    icon: GoogleScholar
-    username: Cheng Wang
-    url: https://www.linkedin.com/in/cheng-wang-88b08310b/
-    desc: Connect with me on GoogleScholar
-    share: false
+
+    
