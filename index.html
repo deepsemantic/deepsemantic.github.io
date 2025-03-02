@@ -1,51 +1,118 @@
----
-layout: page
----
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.2">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheng Wang - Research Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f6fc;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #00509e;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+        }
+        .updates li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
-
-<div align="center" class="home">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108085250-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-108085250-1');
-</script>
-<div align="center">
-<img src="img/chengwang.jpg" alt="c.wang" style="width:200px;height:200px;" algin="left">
-</div>
-<div align="left">
-<ul>
-<li> <font color="red">[Jun 28, 2024]</font> One paper <a href=https://arxiv.org/abs/2303.15057>Towards Unbiased Calibration using Meta-Regularization</a> was accepted at Trans. on Machine Learning Research</li>
-<li> <font color="red">[Feb 11, 2024]</font> I am SPC member for IJCAI 2024</li>
-<li> <font color="red">[Mar 1, 2023]</font> I am SPC member for IJCAI 2023</li>
-<li> <font color="red">[Dec 4, 2022]</font> One paper <a href=https://arxiv.org/pdf/2212.05178.pdf>State-Regularized Recurrent Neural Networks to Extract Automata and Explain Predictions</a> was accepted at IEEE Trans. on PAMI </li>
-<li> <font color="red">[Nov 4, 2022]</font> Two papers <a href=https://aclanthology.org/2022.emnlp-industry.14.pdf>Calibrating Imbalanced Classifiers with Focal Loss: An Empirical Study </a> and <a href=https://aclanthology.org/2022.emnlp-industry.17/>Deploying a Retrieval based Response Model for Task Oriented Dialogues</a> were accepted at EMNLP 2022 Industry Track</li>
-
-</ul>
-</div>
-
-<div align="center">
-<br>
-<p align="justify"> Welcome! My name is Cheng Wang. I am currently a Senior Applied Scientist at Amazon. Prior to that, I was a Research Scientist at Machine Learning Group, NEC Laboratories Europe. I received my PhD (Dr.rer.nat) from <a href="https://hpi.de/">Hasso-Plattner-Institute</a>, University of Potsdam in 2017. There, I was supervised by <a href="https://hpi.de/meinel/lehrstuhl.html">Prof. Dr. Christoph Meinel</a>, my research topic was "Multimodal Deep Learning".  My research focuses are (1) machine (deep) learning methods, e.g, learning algorithms, sequence-to-sequence learning, representation learning, neural architectures, uncertainty estimation/quantification, model calibration and interpretability; (2) their applications to real-world tasks, e.g., information retrieval, recommender systems, natural language processing, computer vision and multimodal learning. I am particularly interested in sequential models (Transformer/GPT/RNNs/LSTMs etc) and state machines related to them.
-</p>
-</div>
+    <header>
+        <h1>Cheng Wang</h1>
+        <p>Senior Applied Scientist | Machine Learning Researcher</p>
+    </header>
+    
+    <nav>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="container" id="news">
+        <h2>News</h2>
+        <ul>
+            <li>[Feb 26, 2025] SPC member for IJCAI 2025, Area Chair for ACL 2025</li>
+            <li>[Jun 28, 2024] One paper accepted at TMLR</li>
+            <li>[Feb 11, 2024] SPC member for IJCAI 2024</li>
+            <li>[Mar 1, 2023] SPC member for IJCAI 2023</li>
+        </ul>
+    </div>
+    
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <div class="profile">
+            <img src="img/chengwang.jpg" alt="Cheng Wang" class="profile-img">
+            <p>Welcome! My name is Cheng Wang. I am currently a Senior Applied Scientist at Amazon. Prior to that, I was a Research Scientist at NEC Laboratories Europe. I received my PhD from <a href="https://hpi.de/">Hasso-Plattner-Institute</a>, University of Potsdam in 2017.</p>
+        </div>
+        <p>My research focuses on deep learning methods, sequence-to-sequence learning, representation learning, uncertainty estimation, and model interpretability. I am particularly interested in sequential models such as Transformer/GPT/RNNs and their applications in real-world tasks.</p>
+    </div>
+    
+    <div class="container" id="research">
+        <h2>Research</h2>
+        <p>My research explores the development of novel machine learning architectures and their applications in information retrieval, recommender systems, NLP, and computer vision.</p>
+    </div>
+    
+    <div class="container" id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li>[Jun 28, 2024] <a href="https://arxiv.org/abs/2303.15057">Towards Unbiased Calibration using Meta-Regularization</a> - TMLR</li>
+            <li>[Dec 4, 2022] <a href="https://arxiv.org/pdf/2212.05178.pdf">State-Regularized RNNs to Extract Automata</a> - IEEE Trans. PAMI</li>
+            <li>[Nov 4, 2022] <a href="https://aclanthology.org/2022.emnlp-industry.14.pdf">Calibrating Imbalanced Classifiers with Focal Loss</a> - EMNLP Industry Track</li>
+        </ul>
+    </div>
+    
+    <div class="container" id="contact">
+        <h2>Contact</h2>
+        <p>Email: dr.rer.nat.chengwang@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/cheng-wang-88b08310b/">linkedin.com/in/chengwang</a></p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Cheng Wang | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
